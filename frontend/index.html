@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campus Events Hub - Your one-stop platform for university events">
+  <meta name="theme-color" content="#1a237e">
+  <title>Campus Events Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1><i class="fas fa-calendar-alt"></i> Campus Events Hub</h1>
+      <nav id="auth-nav">
+        <button id="login-btn" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</button>
+        <button id="register-btn" class="btn btn-secondary"><i class="fas fa-user-plus"></i> Register</button>
+        <button id="logout-btn" class="btn btn-danger" style="display:none;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        <button id="create-event-btn" class="btn btn-success" style="display:none;">
+          <i class="fas fa-plus"></i> Create Event
+        </button>
+        <button id="my-events-btn" class="btn btn-info" style="display:none;">
+          <i class="fas fa-calendar-alt"></i> My Events
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="filters" class="filters-section">
+      <div class="filter-group">
+        <label class="filter-label">
+          <i class="fas fa-tag"></i> Category:
+          <select id="category-filter" class="filter-select">
+            <option value="">All Categories</option>
+            <option value="Club">Club Events</option>
+            <option value="Workshop">Workshops</option>
+            <option value="Sports">Sports Events</option>
+            <option value="Study">Study Groups</option>
+          </select>
+        </label>
+        <label class="filter-label">
+          <i class="fas fa-calendar"></i> Date:
+          <input type="date" id="date-filter" class="filter-input">
+        </label>
+      </div>
+      <button id="create-event-btn" class="btn btn-success" style="display:none;">
+        <i class="fas fa-plus"></i> Create Event
+      </button>
+    </section>
+
+    <section id="events-list" class="events-grid">
+      <!-- Events will be loaded here -->
+    </section>
+
+    <section id="event-details" class="event-details-modal" style="display:none;">
+      <!-- Event details will be shown here -->
+    </section>
+
+    <section id="auth-forms" class="auth-modal" style="display:none;">
+      <!-- Login/Register forms will be shown here -->
+    </section>
+
+    <section id="event-form-section" class="event-form-modal" style="display:none;">
+      <!-- Event create/edit form will be shown here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Campus Events Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html> 
